@@ -19,6 +19,7 @@
     "cypress:dev": "npx cypress open --browser chrome --e2e"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "clsx": "^1.2.1",
     "lucide-react": "^0.260.0",
     "next": "^13.5.4",

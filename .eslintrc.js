@@ -9,24 +9,19 @@ module.exports = {
     'eslint:recommended',
     'next',
     'next/core-web-vitals',
+    'plugin:cypress/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
+  ignorePatterns: ['.next/**/*', 'node_modules/**/*', '.prettierrc.*'],
   rules: {
+    'react/self-closing-comp': ['error'],
     'no-unused-vars': 'off',
-    'no-console': 'warn',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/no-unescaped-entities': 'off',
-
-    'react/display-name': 'off',
-    'react/jsx-curly-brace-presence': [
-      'warn',
-      { props: 'never', children: 'never' },
-    ],
-
-    //#region  //*=========== Unused Import ===========
+    '@typescript-eslint/no-var-requires': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'warn',
       {
@@ -36,10 +31,7 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    //#endregion  //*======== Unused Import ===========
-
-    //#region  //*=========== Import Sort ===========
-    'simple-import-sort/exports': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'simple-import-sort/imports': [
       'warn',
       {
